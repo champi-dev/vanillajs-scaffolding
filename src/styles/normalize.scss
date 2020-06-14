@@ -352,3 +352,7 @@ h1, h2, h3, h4, span, p, label {
   padding: unset;
   margin: unset;
 }
+
+* {
+  box-sizing: border-box;
+}

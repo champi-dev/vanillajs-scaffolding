@@ -1,0 +1,39 @@
+#disclaimer {
+  position: relative;
+  width: 100%;
+  height: 10.1rem;
+  padding: 2.5rem;
+  display: flex;
+  background-color: map-get($colors, grey);
+}
+
+#disclaimer__left {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+#disclaimer__left__up {
+  font-size: 1.6rem;
+}
+
+#disclaimer__left__down {
+  font-size: 3.4rem;
+  font-weight: 600;
+}
+
+#disclaimer__right {
+  display: flex;
+  align-items: center;
+  width: 75%;
+
+  img {
+    cursor: pointer;
+    position: absolute;
+    right: 2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}

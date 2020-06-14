@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+html {
+  font-family: map-get($font, main-family), sans-serif;
+  font-size: map-get($font, base-size) !important;
+}
+
+#app {
+  display: flex;
+  font-size: 1.6rem;
+}
+
+div,
+span,
+p,
+label,
+td {
+  color: map-get($colors, black);
+}

@@ -1,5 +1,31 @@
 #navbar {
-  background: lightblue;
-  height: 4rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: rgba(map-get($colors, black), 0.4);
+  height: 15.1rem;
   width: 100%;
+  padding: 4rem 12.8rem 8.4rem 13.3rem;
+
+  h1 {
+    font-size: 3.2rem;
+    color: map-get($colors, white);
+  }
+
+  span {
+    margin-right: 5rem;
+    color: map-get($colors, white);
+  }
+}
+
+#navbar__right {
+  padding-top: 0.9rem;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: rotateY(180deg);
+  }
 }

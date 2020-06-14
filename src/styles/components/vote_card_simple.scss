@@ -90,12 +90,35 @@
   display: flex;
   position: absolute;
   bottom: 0rem;
-  background: blue;
 
   div {
+    cursor: pointer;
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  img {
+    width: 3.7rem;
+    height: 3.7rem;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+#vote_card_simple__options__accept {
+  background-color: map-get($colors , primary);
+}
+
+#vote_card_simple__options__reject {
+  background-color: map-get($colors , secondary);
+  img {
+    transform: rotateX(180deg) rotateY(180deg);
   }
 }

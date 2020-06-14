@@ -39,7 +39,27 @@
 
 #index__body {
   display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 102.5rem;
   padding-top: 3.2rem;
+}
+
+#index__body__title {
+  width: 100%;
+  font-weight: 300;
+  font-size: 3.8rem;
+  margin-top: 3.9rem;
+  margin-bottom: 4rem;
+}
+
+#index__body__poll {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#index__body__poll__single {
+  width: 48%;
 }

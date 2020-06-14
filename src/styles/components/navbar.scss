@@ -2,13 +2,14 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  height: 15.1rem;
+  height: 11.1rem;
   width: 100%;
-  padding: 4rem 12.8rem 8.4rem 13.3rem;
+  padding: 4rem 12.8rem 0 13.3rem;
   z-index: 2;
 
   h1 {
     font-size: 3.2rem;
+    font-weight: 300;
     color: map-get($colors, white);
   }
 

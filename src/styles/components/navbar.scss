@@ -17,6 +17,11 @@
     margin-right: 5rem;
     color: map-get($colors, white);
   }
+
+  a {
+    color: map-get($colors, white);
+    text-decoration: unset;
+  }
 }
 
 #navbar__right {

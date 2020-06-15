@@ -63,3 +63,33 @@
 #index__body__poll__single {
   width: 48%;
 }
+
+#index__footer {
+  display: flex;
+  width: 100%;
+  border-top: dashed 0.1rem map-get($colors , black);
+  max-width: 102.5rem;
+  padding-top: 2.9rem;
+  margin-bottom: 5.2rem;
+
+  a {
+    cursor: pointer;
+    color: map-get($colors , black);
+    text-decoration: unset;
+  }
+}
+
+#index__footer__left {
+  width: 90%;
+  a {
+    margin-right: 1.6rem;
+  }
+}
+
+#index__footer__right {
+  width: 10%;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

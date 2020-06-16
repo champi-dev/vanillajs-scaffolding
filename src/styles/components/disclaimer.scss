@@ -26,14 +26,28 @@
   display: flex;
   align-items: center;
   width: 75%;
+}
+
+#disclaimer__right__icon {
+  cursor: pointer;
+  position: absolute;
+  right: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 200ms ease-in-out;
+
+  &:hover {
+    background-color: rgba(map-get($colors, black), 0.5);
+  }
 
   img {
-    cursor: pointer;
-    position: absolute;
-    right: 2.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 50%;
+    height: 50%;
   }
 }

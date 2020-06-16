@@ -5,9 +5,10 @@ block head
 block content
   div#index
     div#index__header(style="background-image: url('../assets/dimebag.jpg')")
-      include ../components/navbar
-      div#index_header_vote
-        include ../components/vote_card_simple
+      div#index__header__group
+        include ../components/navbar
+        div#index_header_vote
+          include ../components/vote_card_simple
       div#index_header_footer
         include ../components/poll_closing_indicator
 

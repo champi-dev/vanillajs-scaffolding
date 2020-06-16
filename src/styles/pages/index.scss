@@ -21,10 +21,17 @@
   }
 }
 
+#index__header__group {
+  z-index: 2;
+  max-width: map-get($sizes , max);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
 #index_header_vote {
-  position: absolute;
-  top: 16.1rem;
-  left: 13.2rem;
+  margin-top: 10rem;
   width: 50rem;
   height: 38rem;
 }
@@ -41,7 +48,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 102.5rem;
+  max-width: map-get($sizes , max);
   padding-top: 3.2rem;
 }
 

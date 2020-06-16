@@ -1,10 +1,10 @@
 #navbar {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   height: 11.1rem;
   width: 100%;
-  padding: 4rem 12.8rem 0 13.3rem;
+  padding: 4rem 0 0;
   z-index: 2;
 
   h1 {
@@ -29,7 +29,6 @@
 }
 
 #navbar__right {
-  padding-top: 0.9rem;
   display: flex;
   align-items: center;  
 }

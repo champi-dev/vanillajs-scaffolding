@@ -1,12 +1,23 @@
+import axios from 'axios'
 import voteCardComplex from '../components/vote_card_complex'
 import stateCreator from '../../utils/stateCreator'
 import trimText from '../../utils/trimText'
 
-const state = stateCreator()
-let artistsContainerNode
 
+let artistsContainerNode
 export default () => {
-  Object.values(state.data()).forEach(({ name, description, link, image_url, downvotes, upvotes }, index) => {
+  axios.get('http://localhost:3000/').then(res => {
+    render(res.data)
+  }).catch(e => render())
+}
+
+function render(dbData) {
+  const state = stateCreator()
+  if (dbData) state.setData(dbData)
+
+  Object.values(state.data()).forEach(({
+    name, description, link, image_url, downvotes, upvotes
+  }, index) => {
     if (index === 0) {
       setHeaderArtist({ name, description, link, image_url })
       return
@@ -16,6 +27,7 @@ export default () => {
     const downper = downvotes / (downvotes + upvotes) * 100
 
     setSingleArtist({
+      state,
       name,
       description,
       link,
@@ -37,7 +49,7 @@ function setHeaderArtist({ name, description, link, image_url }) {
   headerArtist.querySelector('#vote_card_simple__content__link').href = link
 }
 
-function setSingleArtist({ name, description, link, image_url, downper, upper }, index) {
+function setSingleArtist({ state, name, description, link, image_url, downper, upper }, index) {
   if (index === 0) {
     artistsContainerNode = document.querySelector('#index__body__poll')
     setArtistValues(document.querySelectorAll('.index__body__poll__single')[0])
@@ -74,7 +86,7 @@ function setSingleArtist({ name, description, link, image_url, downper, upper },
     element.querySelector('.vote_card_complex__result__left span').textContent = `${Math.round(upper)}%`
     element.querySelector('.vote_card_complex__result__right').style.width = `${downper}%`
     element.querySelector('.vote_card_complex__result__right span').textContent = `${Math.round(downper)}%`
-    
+
     if (upper >= downper) {
       element.querySelector('.vote_card_complex__content__title__like').classList.remove('alt')
       element.querySelector('.vote_card_complex__content__title__like').classList.add('default')

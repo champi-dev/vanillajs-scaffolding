@@ -22,5 +22,8 @@
     "parcel-bundler": "^1.11.0",
     "pug": "^3.0.0",
     "sass": "^1.15.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
   }
 }

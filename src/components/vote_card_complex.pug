@@ -1,23 +1,24 @@
-div#vote_card_complex(style="background-image: url('../assets/zakk.jpg')")
-  div#vote_card_complex__overlay
-  div#vote_card_complex__content
-    div#vote_card_complex__content__title
-      div#vote_card_complex__content__title__like
+div.vote_card_complex(style="background-image: url('../assets/zakk.jpg')")
+  div.vote_card_complex__overlay
+  div.vote_card_complex__content
+    div.vote_card_complex__content__title
+      div.vote_card_complex__content__title__like
         img(src="../assets/thumbs_up.svg" alt="like")
       h3 Zakk Wylde
 
-    div#vote_card_complex__content__description
+    div.vote_card_complex__content__description
       p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam minima quia quam necessitatibus ut.
-      div#vote_card_complex__content__description__bottom
-        button View Full Report
+      div.vote_card_complex__content__description__bottom
+        a(href="#" target="_blank")
+          button View Full Report
         span 
           strong 1 month ago
           span in Entertainment
   
-  div#vote_card_complex__result
-    div#vote_card_complex__result__left(style="width: 64%")
+  div.vote_card_complex__result
+    div.vote_card_complex__result__left(style="width: 64%")
       img(src="../assets/thumbs_up.svg" alt="like")
       span 64%
-    div#vote_card_complex__result__right(style="width: 36%")
+    div.vote_card_complex__result__right(style="width: 36%")
       img(src="../assets/thumbs_up.svg" alt="like")
       span 36%

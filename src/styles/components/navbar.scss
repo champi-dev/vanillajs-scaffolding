@@ -21,17 +21,37 @@
   a {
     color: map-get($colors, white);
     text-decoration: unset;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
 #navbar__right {
   padding-top: 0.9rem;
   display: flex;
+  align-items: center;  
+}
+
+#navbar__right__icon {
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  transition: background-color 200ms ease-in-out;
+
+  &:hover {
+    background-color: rgba(map-get($colors, black), 0.8);
+  }
 
   img {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 60%;
+    height: 60%;    
     transform: rotateY(180deg);
   }
 }
+

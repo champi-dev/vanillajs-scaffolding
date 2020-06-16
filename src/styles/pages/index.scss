@@ -80,16 +80,19 @@
 }
 
 #index__footer__left {
-  width: 90%;
+  width: 70%;
   a {
     margin-right: 1.6rem;
   }
 }
 
 #index__footer__right {
-  width: 10%;
-  width: 10%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  img {
+    margin-right: 1rem;
+  }
 }

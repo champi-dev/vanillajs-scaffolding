@@ -1,0 +1,22 @@
+$colors: (
+  white: #FFFFFF,
+  black: #333333,
+  grey: #EBEBEB,
+  primary: #1CBBB4,
+  secondary: #FFAD1D
+);
+
+$font: (
+  main-family: 'Lato',
+	base-size: 62.5%
+);
+
+$breakpoints: (
+  min: 375px,
+  med: 1024px,
+  lg: 1280px
+);
+
+$sizes: (
+  max: 102.5rem
+);

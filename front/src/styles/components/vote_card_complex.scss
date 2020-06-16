@@ -1,0 +1,226 @@
+.vote_card_complex {
+  position: relative;
+  width: 100%;
+  height: 55rem;
+  background-size: cover;
+  background-position: top center;
+  padding-top: 32.1rem;
+  margin-bottom: 4rem;
+
+  @media screen and (max-width: 600px) {
+    padding-top: 25rem;
+  }
+}
+
+.vote_card_complex__overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: map-get($colors, black);
+  opacity: 0.4;
+}
+
+.vote_card_complex__content {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.vote_card_complex__content__title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+
+  h3 {
+    color: map-get($colors, white);
+    font-size: 4.1rem;
+  }
+}
+
+.vote_card_complex__content__title__like {
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.1rem;
+
+  &.default {
+    background-color: map-get($colors, primary);
+  }
+
+  &.alt {
+    background-color: map-get($colors, secondary);
+    img {
+      transform: rotateX(180deg) rotateY(180deg);
+    }
+  }
+
+  img {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+}
+
+.vote_card_complex__content__description {
+  padding-left: 4.2rem;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    color: map-get($colors, white);
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+}
+
+.vote_card_complex__content__description__bottom {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1.6rem;
+
+  @media screen and (max-width: 350px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button {
+    cursor: pointer;
+    width: 15.7rem;
+    height: 4.1rem;
+    background-color: rgba(map-get($colors, black), 0.5);
+    color: map-get($colors, white);
+    font-size: 1.4rem;
+    border: 0.1rem solid map-get($colors, white);
+    transition: background-color 200ms ease-in-out;
+    outline: none;
+
+    @media screen and (max-width: 350px) {
+      margin-bottom: 1rem;
+    }
+
+    &:hover {
+      background-color: map-get($colors, black);
+    }
+  }
+
+  span {
+    color: map-get($colors, white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1.2rem;
+
+    @media screen and (max-width: 350px) {
+      align-items: flex-start;
+    }
+  }
+}
+
+.vote_card_complex__result {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 5rem;
+
+  img {
+    width: 2.9rem;
+    height: 2.9rem;
+    margin: 0 0.9rem;
+    z-index: 2;
+  }
+
+  span {
+    font-size: 2rem;
+    color: map-get($colors, white);
+    z-index: 2;
+  }
+}
+
+.vote_card_complex__result__left,
+.vote_card_complex__result__right {
+  display: flex;
+  align-items: center;
+}
+
+.vote_card_complex__result__left {
+  background-color: rgba(map-get($colors, primary), 0.5);
+}
+
+.vote_card_complex__result__right {
+  justify-content: flex-end;
+  background-color: rgba(map-get($colors, secondary), 0.5);
+
+  span {
+    order: -1;
+  }
+
+  img {
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+}
+
+.result__repeat {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: unset;
+  cursor: pointer;
+
+  &:active {
+    transform: translateX(-50%) scale(0.8);
+  }
+}
+
+.vote_card_complex__vote {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+
+  img {
+    width: 2.9rem;
+    height: 2.9rem;
+    margin: 0 0.9rem;
+    z-index: 2;
+  }
+}
+
+.vote_card_complex__vote__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(map-get($colors, primary), 0.5);
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(map-get($colors, primary), 1);
+  }
+}
+
+.vote_card_complex__vote__right {
+  justify-content: flex-end;
+  background-color: rgba(map-get($colors, secondary), 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(map-get($colors, secondary), 1);
+  }
+
+  span {
+    order: -1;
+  }
+
+  img {
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+}

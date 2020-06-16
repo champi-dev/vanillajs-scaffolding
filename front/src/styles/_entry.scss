@@ -1,0 +1,12 @@
+@import './normalize.scss';
+@import './variables.scss';
+@import './general.scss';
+
+@import './components/navbar.scss';
+@import './components/vote_card_simple.scss';
+@import './components/vote_card_complex.scss';
+@import './components/poll_closing_indicator.scss';
+@import './components/disclaimer.scss';
+@import './components/form_trigger.scss';
+
+@import './pages/index.scss'

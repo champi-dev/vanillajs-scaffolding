@@ -1,0 +1,153 @@
+#index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#index__header {
+  display: flex;
+  background-size: cover;
+  background-position: top center;
+  width: 100%;
+  height: 74.1rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(map-get($colors, black), 0.4);
+  }
+}
+
+#index__header__group {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#index_header_vote {
+  margin-top: 10rem;
+  max-width: 50rem;
+  height: 38rem;
+
+  @media screen and (max-width: 785px) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 520px) {
+    margin-top: 14rem;
+  }
+
+  @media screen and (max-width: 370px) {
+    height: 42rem;
+  }
+}
+
+#index_header_footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5.1rem;
+  display: flex;
+}
+
+#index__body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;  
+  padding-top: 3.2rem;
+}
+
+#index__body__title {
+  width: 100%;
+  font-weight: 300;
+  font-size: 3.8rem;
+  margin-top: 3.9rem;
+  margin-bottom: 4rem;
+}
+
+#index__body__poll {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.index__body__poll__single {
+  width: 48%;
+
+  @media screen and (max-width: 785px) {
+    width: 100%;
+  }
+}
+
+#index__footer {
+  display: flex;
+  width: 100%;
+  border-top: dashed 0.1rem map-get($colors , black);
+  max-width: 102.5rem;
+  padding-top: 2.9rem;
+  margin-bottom: 5.2rem;
+  
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+
+  a {
+    cursor: pointer;
+    color: map-get($colors , black);
+    text-decoration: unset;
+  }
+}
+
+#index__footer__left {
+  width: 70%;
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 1.6rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    margin-right: 1.6rem;
+
+    @media screen and (max-width: 600px) {
+      margin: 0;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+  }
+}
+
+#index__footer__right {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @media screen and (max-width: 600px) {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  img {
+    margin-right: 1rem;
+  }
+}
+
+// max-width for responsive styles
+#index__header__group, #index__body, #index__footer {
+  max-width: map-get($sizes , max);
+
+  @media screen and (max-width: 1124px) {
+    max-width: 95%;
+  }
+}

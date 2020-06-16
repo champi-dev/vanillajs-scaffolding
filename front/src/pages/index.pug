@@ -1,0 +1,36 @@
+extends ../layouts/default
+
+block head
+  title Zemoga Test
+block content
+  div#index
+    div#index__header(style="background-image: url('../assets/dimebag.jpg')")
+      div#index__header__group
+        include ../components/navbar
+        div#index_header_vote
+          include ../components/vote_card_simple
+      div#index_header_footer
+        include ../components/poll_closing_indicator
+
+    div#index__body
+      include ../components/disclaimer
+      h3#index__body__title Previous Rulings
+    
+      div#index__body__poll
+        div.index__body__poll__single
+          include ../components/vote_card_complex
+      
+      include ../components/form_trigger
+    
+    div#index__footer
+      div#index__footer__left
+        a(href="#") Terms and conditions
+        a(href="#") Privacy policy
+        a(href="#") Contact us
+      div#index__footer__right
+        a(href="#")
+          img(src="../assets/facebook.svg" alt="facebook")
+        a(href="#")
+          img(src="../assets/twitter.svg" alt="twitter")
+        a(href="#") Follow us
+        

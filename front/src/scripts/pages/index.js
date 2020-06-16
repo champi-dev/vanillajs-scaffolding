@@ -6,7 +6,7 @@ import trimText from '../../utils/trimText'
 
 let artistsContainerNode
 export default () => {
-  axios.get('http://localhost:3000/').then(res => {
+  axios.get('http://localhost:3000/artists').then(res => {
     render(res.data)
   }).catch(e => render())
 }
@@ -70,10 +70,11 @@ function setSingleArtist({ state, name, description, link, image_url, downper, u
         if (type === 'up') {
           current[index + 1].upvotes += 1
         } else {
-          current[index + 1].upvotes -= 1
+          current[index + 1].downvotes += 1
         }
 
         state.setData(current)
+        axios.post('http://localhost:3000/update', current[index + 1])
         return current[index + 1]
       }
     })

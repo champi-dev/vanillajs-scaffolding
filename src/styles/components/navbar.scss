@@ -7,15 +7,31 @@
   padding: 4rem 0 0;
   z-index: 2;
 
+  @media screen and (max-width: 785px) {
+    flex-direction: column;
+  }
+  
+  @media screen and (max-width: 520px) {
+    align-items: flex-start;
+  }
+
   h1 {
     font-size: 3.2rem;
     font-weight: 300;
     color: map-get($colors, white);
+
+    @media screen and (max-width: 520px) {
+      margin-bottom: 1.6rem;
+    }
   }
 
   span {
     margin-right: 5rem;
     color: map-get($colors, white);
+
+    @media screen and (max-width: 520px) {
+      margin-bottom: 1rem;
+    }
   }
 
   a {
@@ -31,6 +47,11 @@
 #navbar__right {
   display: flex;
   align-items: center;  
+
+  @media screen and (max-width: 520px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 #navbar__right__icon {
@@ -42,6 +63,10 @@
   justify-content: center;
   align-items: center;
   transition: background-color 200ms ease-in-out;
+
+  @media screen and (max-width: 520px) {
+    order: -1;
+  }
 
   &:hover {
     background-color: rgba(map-get($colors, black), 0.8);

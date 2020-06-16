@@ -6,6 +6,10 @@
   background-position: top center;
   padding-top: 32.1rem;
   margin-bottom: 4rem;
+
+  @media screen and (max-width: 600px) {
+    padding-top: 25rem;
+  }
 }
 
 #vote_card_complex__overlay {
@@ -69,6 +73,11 @@
   justify-content: space-between;
   padding-right: 1.6rem;
 
+  @media screen and (max-width: 350px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   button {
     cursor: pointer;
     width: 15.7rem;
@@ -79,6 +88,10 @@
     border: 0.1rem solid map-get($colors , white);
     transition: background-color 200ms ease-in-out;
     outline: none;
+
+    @media screen and (max-width: 350px) {
+      margin-bottom: 1rem;
+    }
 
     &:hover {
       background-color: map-get($colors, black);
@@ -91,6 +104,10 @@
     flex-direction: column;
     align-items: flex-end;
     font-size: 1.2rem;
+
+    @media screen and (max-width: 350px) {
+      align-items: flex-start;
+    }
   }
 }
 

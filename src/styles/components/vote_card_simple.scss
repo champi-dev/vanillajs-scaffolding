@@ -33,7 +33,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  padding: 0 2rem;
 
   span,
   h2,
@@ -54,6 +54,10 @@
 #vote_card_simple__content__title {
   font-size: 4rem;
   margin-bottom: 2.7rem;
+
+  @media screen and (max-width: 370px) {
+    font-size: 2.5rem;
+  }
 }
 
 #vote_card_simple__content__description {

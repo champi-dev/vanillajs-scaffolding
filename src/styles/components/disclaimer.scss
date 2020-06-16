@@ -1,16 +1,24 @@
 #disclaimer {
   position: relative;
   width: 100%;
-  height: 10.1rem;
+  min-height: 10.1rem;
   padding: 2.5rem;
   display: flex;
   background-color: map-get($colors, grey);
+
+  @media screen and (max-width: 718px) {
+    flex-direction: column;
+  }
 }
 
 #disclaimer__left {
   display: flex;
   flex-direction: column;
   width: 20%;
+
+  @media screen and (max-width: 718px) {
+    width: 90%;
+  }
 }
 
 #disclaimer__left__up {
@@ -20,12 +28,23 @@
 #disclaimer__left__down {
   font-size: 3.4rem;
   font-weight: 600;
+
+  @media screen and (max-width: 942px) {
+    font-size: 2.5rem;
+  }
 }
 
 #disclaimer__right {
   display: flex;
   align-items: center;
   width: 75%;
+  padding-left: 1.6rem;
+
+  @media screen and (max-width: 718px) {
+    width: 90%;
+    padding-top: 1.6rem;
+    padding-left: unset;
+  }
 }
 
 #disclaimer__right__icon {

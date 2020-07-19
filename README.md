@@ -1,5 +1,4 @@
-# Zemoga Test
-
+# vanillajs scaffolding
 ## Run Back-end
 `cd back`
 ```
